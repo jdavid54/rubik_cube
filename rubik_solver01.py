@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------
-# Name:        module1
-# Purpose:
+# Name:         test de rubik_solver
+# Purpose:      nécessite git clone en local rubik_solver
 #
 # Author:      Jean
 #
