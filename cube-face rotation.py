@@ -178,7 +178,7 @@ if method == 'Beginner':
     sequence=liste    #avec rotation Y
 
 
-if method == 'Kaciemba':
+if method == 'Kociemba':
     #méthode Kaciemba
     sequence=("L'","F","B2","R'","B","R'","L","B","D'","F'","U","B2","U","F2","D'","R2","L2","U","F2","D'")
     #reverse=("D","F'2","U'","L'2","R'2","D","F'2","U'","B'2","U'","F","D","B'","L'","R","B'","R","B'2","F'","L")
