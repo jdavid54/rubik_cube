@@ -18,6 +18,20 @@ indexes = {'F':((7,8,9,28,31,34,48,47,46,18,15,12),(19,20,21,24,27,26,25,22)), \
            'E':((22,23,24,31,32,33,40,41,42,13,14,15),())\
 }
 
+colorzone={'y':(0,9), 'b':(9,18), 'r':(18,27), 'g':(27,36), 'o':(36,45), 'w':(45,54)}
+
+def fullfaceOK(c):
+    z=colorzone[c]
+    n=cube_list[z[0]:z[1]].count(c)
+    if n==9: 
+        print('Face',c,'full',z,cube_list[z[0]:z[1]])
+    else:
+        print('Face',c,'corrupted',z,cube_list[z[0]:z[1]])
+
+def cubestate():
+    for c in ('ybrgow'):
+        fullfaceOK(c)    
+
 def rotation(face):
     for k in (0,1):                 #0:adjacent edges, 1:face
         tampon=[]
@@ -88,7 +102,8 @@ def doSequence(seq):
         for i in cube_list:
             cube2+=i
         printcube(cube2)
-    return cube2
+        cubestate()
+    return cube2, whiteOK, layer2
 
 def printcube(cube):
     # print up face (yellow)
@@ -103,10 +118,29 @@ def printcube(cube):
     print('   ',cube[45:48])
     print('   ',cube[48:51])
     print('   ',cube[51:54])
+    
+def printresult():
+    print('Solver method :',method)
+    print('Cube in :')
+    print(cubein)
+    print('Cube out :')
+    print(cubeout)
+    print(cubeout==goodcube)
+    print(whiteOK)
+    print(layer2)
+    print(finalface)
 
+def fff(t):
+    n=t.count('Y')
+    m=t.count('Y\'')
+    p=t.count('Y2')
+    return ("final face "+"rgob"[(n-2*m+p)%4],n,m,p)
+    
+    
 cubein = 'wowgybwyogygybyoggrowbrgywrborwggybrbwororbwborgowryby'
 goodcube = 'yyyyyyyyybbbbbbbbbrrrrrrrrrgggggggggooooooooowwwwwwwww'
-method='Beginner'
+method='CFOP'
+finalface=''
 
 cube_list=list(cubein)
 #face='R'
@@ -125,6 +159,7 @@ if method == 'CFOP':        # cross (C), first two layers (F2L), orient last lay
     #        o                b  r  g  o     b  r  g  o     b  r
     text+=", Y, L, U', L', U, Y, Y, Y, Y, U, Y, Y, Y, Y, U, Y, Y"
     text+=", R, U', R, U, R, U, R, U', R', U', R2"
+    finalface=fff(text)
     liste=text.split(', ')
     sequence=liste    #avec rotation Y
 
@@ -138,6 +173,7 @@ if method == 'Beginner':
     #                      rotation 61
     text+=", U', L', U, L, U, F, U', F', Y, Y, U2, Y2, U, R, U', R', U', F', U, F, Y, Y, U, R, U', R', U', F', U, F, Y, F, R, U, R', U', F', U2, F, R, U, R', U', F', F, R, U, R', U', F', U, U, U, U"
     text+=", R, U', L', U, R', U', L, R', D', R, D, R', D', R, D, U, R', D', R, D, R', D', R, D, U, U, R', D', R, D, R', D', R, D, U"
+    finalface=fff(text)
     liste=text.split(', ')
     sequence=liste    #avec rotation Y
 
@@ -146,13 +182,12 @@ if method == 'Kaciemba':
     #méthode Kaciemba
     sequence=("L'","F","B2","R'","B","R'","L","B","D'","F'","U","B2","U","F2","D'","R2","L2","U","F2","D'")
     #reverse=("D","F'2","U'","L'2","R'2","D","F'2","U'","B'2","U'","F","D","B'","L'","R","B'","R","B'2","F'","L")
+    finalface=fff(text)
+    
+cubeout, whiteOK, layer2 = doSequence(sequence)
 
-printcube(cubein)
-cubeout = doSequence(sequence)
+printresult()
 
-def printresult():
-    print(cubein)
-    print(cubeout)
-    print(cubeout==goodcube)
+
 
 
