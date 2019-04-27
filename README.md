@@ -7,17 +7,17 @@ a study of how to display the cube faces following a sequence of the face rotati
 
 inspired from https://ruwix.com/the-rubiks-cube/mathematics-of-the-rubiks-cube-permutation-group/
 
---------rubik-solver01.py
+--------rubik-solver01.py (need rubik_solver repo)
 
-enter the cube configuration as a string cubin='wowgybwyogygybyoggrowbrgywrborwggybrbwororbwborgowryby'
+Enter the cube configuration as a string cubin='wowgybwyogygybyoggrowbrgywrborwggybrbwororbwborgowryby'
 
-the programm will compute the sequence of moves for 3 methods : Beginner, CFOP and Kociemba
+the programm will compute the sequence of moves for 3 methods : Beginner, CFOP and Kociemba to solve the cube
 
-and give the time of computation
+and give the time of computation for each method
 
---------rubik_crypting.py & cube_face_rotation.py
+--------rubik_crypting.py & cube_face_rotation.py (need rubik_solver repo)
 
-a proposition to encrypt text file using rubik cube sequence of scrambling 
+A proposition to encrypt text file using rubik cube sequence of scrambling 
 
 we choose a sequence of scrambling the text (which gives the encrypt key for a string of 54-letters long)
 
