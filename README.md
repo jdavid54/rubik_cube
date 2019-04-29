@@ -1,7 +1,7 @@
 # rubik_cube
 ## Cube face rotation 
 
- * [`Face rotation`](/cube_facerotation.py)
+ * [`Face rotation`](cube_facerotation.py)
 
 show cube state
 
@@ -13,7 +13,7 @@ inspired from https://ruwix.com/the-rubiks-cube/mathematics-of-the-rubiks-cube-p
 
 ## Solving the cube (need rubik_solver repo)
 
- * [`3 methods for Rubik's cube solving`](/rubik-solver01.py)
+ * [`3 methods for Rubik's cube solving`](rubik-solver01.py)
 
 Enter the cube configuration as a string cubin='wowgybwyogygybyoggrowbrgywrborwggybrbwororbwborgowryby'
 
@@ -23,8 +23,8 @@ and give the time of computation for each method
 
 ## Encryption & decyphering using rotations (need rubik_solver repo)
 
- * [`Rubik rotation for encrypting`](/rubik_crypting.py)
- * [`Encryption & decyphering libraries`](/cube_face_rotation.py)
+ * [`Rubik rotation for encrypting`](rubik_crypting.py)
+ * [`Encryption & decyphering libraries`](cube_face_rotation.py)
 
 A proposition to encrypt text file using rubik cube sequence of scrambling 
 
