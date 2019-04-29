@@ -13,7 +13,7 @@ inspired from https://ruwix.com/the-rubiks-cube/mathematics-of-the-rubiks-cube-p
 
 ## Solving the cube (need rubik_solver repo)
 
- * [`3 methods for Rubik's cube solving`](/rubik-solver01.py)
+ * [`3 methods for Rubik's cube solving`](/rubik_solver01.py)
 
 Enter the cube configuration as a string cubin='wowgybwyogygybyoggrowbrgywrborwggybrbwororbwborgowryby'
 
