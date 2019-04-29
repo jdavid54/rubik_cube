@@ -1,18 +1,3 @@
-#-------------------------------------------------------------------------------
-# Name:        module1
-# Purpose:
-#
-# Author:      Jean
-#
-# Created:     24/04/2019
-# Copyright:   (c) Jean 2019
-# Licence:     <your licence>
-#-------------------------------------------------------------------------------
-#cubein = 'wowgybwyogygybyoggrowbrgywrborwggybrbwororbwborgowryby'
-goodcube = 'yyyyyyyyybbbbbbbbbrrrrrrrrrgggggggggooooooooowwwwwwwww'
-#method='Beginner'
-#cube_list=list(cubein)
-
 indexes = {'F':((7,8,9,28,31,34,48,47,46,18,15,12),(19,20,21,24,27,26,25,22)), \
            'R':((27,24,21,9,6,3,37,40,43,54,51,48),(34,31,28,29,30,33,36,35)), \
            'L':((19,22,25,46,49,52,45,42,39,1,4,7),(12,15,18,17,16,13,10,11)), \
@@ -49,11 +34,13 @@ def whitecrossOK():
         if 'w' != cube_list[k-1]:
             return False
     return True
+
 def whitefaceOK():
     for k in range(46,55):
         if 'w' != cube_list[k-1]:
             return False
     return True
+
 def secondlayerOK():
     for k in (13, 22, 31, 40):
         if cube_list[k] != cube_list[k-1] or cube_list[k] != cube_list[k+1] :
@@ -111,7 +98,6 @@ def printcube(cube):
     print('   ',cube[48:51])
     print('   ',cube[51:54])
 
-
 def sequence_def(method='Beginner'):
     if method == 'CFOP':        # cross (C), first two layers (F2L), orient last layer (OLL), permute last layer (PLL)
         # méthode CFOP      F=         g                   o                                b                       31  r
@@ -151,20 +137,3 @@ def printresult():
     print(cubein)
     print(cubeout)
     print(cubeout==goodcube)
-
-def main():
-    global cubein, cubeout, cube_list
-    # process
-    printcube(cubein)
-    sequence = sequence_def(method)
-    cubeout = doSequence(sequence)
-    printcube(cubeout)
-    printresult()
-
-if __name__ == '__main__':
-    main()
-
-
-
-
-
