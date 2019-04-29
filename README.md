@@ -7,6 +7,8 @@ a study of how to display the cube faces following a sequence of the face rotati
 
 inspired from https://ruwix.com/the-rubiks-cube/mathematics-of-the-rubiks-cube-permutation-group/
 
+<img src="https://github.com/jdavid54/rubik_cube/mathematics-permutation-group.jpg">
+
 --------rubik-solver01.py (need rubik_solver repo)
 
 Enter the cube configuration as a string cubin='wowgybwyogygybyoggrowbrgywrborwggybrbwororbwborgowryby'
