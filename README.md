@@ -1,7 +1,7 @@
 # rubik_cube
 ## Cube face rotation 
 
- * [`Face rotation`](/rubik_cube/cube_facerotation.py)
+ * [`Face rotation`](~/rubik_cube/cube_facerotation.py)
 
 show cube state
 
