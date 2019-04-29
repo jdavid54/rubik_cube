@@ -1,5 +1,5 @@
 # rubik_cube
----------cube_face rotation.py 
+## Cube face rotation 
 
  * [`Face rotation`](/cube_facerotation)
 
@@ -11,7 +11,7 @@ inspired from https://ruwix.com/the-rubiks-cube/mathematics-of-the-rubiks-cube-p
 
 [<img src=https://github.com/jdavid54/rubik_cube/blob/master/mathematics-permutation-group.jpg />](https://ruwix.com/the-rubiks-cube/mathematics-of-the-rubiks-cube-permutation-group/)
 
---------rubik-solver01.py (need rubik_solver repo)
+## Solving the cube (need rubik_solver repo)
 
  * [`3 methods for Rubik's cube solving`](/rubik-solver01)
 
@@ -21,7 +21,7 @@ the programm will compute the sequence of moves for 3 methods : Beginner, CFOP a
 
 and give the time of computation for each method
 
---------rubik_crypting.py & cube_face_rotation.py (need rubik_solver repo)
+## Encryption & decyphering using rotations (need rubik_solver repo)
 
  * [`Rubik rotation for encrypting`](/rubik_crypting)
  * [`Encryption & decyphering libraries`](/cube_face_rotation)
