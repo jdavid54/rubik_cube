@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+#-------------------------------------------------------------------------------
+# Name:        Rubik's cube Rotation study versiom 1.0
+# Purpose:
+#
+# Author:      Jean
+#
+# Created:     24/04/2019
+# Copyright:   (c) Jean 2019
+# Licence:     Open source
+#-------------------------------------------------------------------------------
+=======
+>>>>>>> 15053d7eb72b0f84c5b19cafe9f6101d542c188a
 indexes = {'F':((7,8,9,28,31,34,48,47,46,18,15,12),(19,20,21,24,27,26,25,22)), \
            'R':((27,24,21,9,6,3,37,40,43,54,51,48),(34,31,28,29,30,33,36,35)), \
            'L':((19,22,25,46,49,52,45,42,39,1,4,7),(12,15,18,17,16,13,10,11)), \
@@ -6,6 +19,7 @@ indexes = {'F':((7,8,9,28,31,34,48,47,46,18,15,12),(19,20,21,24,27,26,25,22)), \
            'B':((3,2,1,10,13,16,52,53,54,36,33,30),(37,38,39,42,45,44,43,40)), \
            'E':((22,23,24,31,32,33,40,41,42,13,14,15),())\
 }
+
 
 def rotation(face):
     for k in (0,1):                 #0:adjacent edges, 1:face
@@ -47,9 +61,11 @@ def secondlayerOK():
             return False
     return True
 
+def init(cube):
+    global cubein, cube_list
+    cube_list = list(cube)
+
 def doSequence(seq):
-    global cube_list
-    cube_list = list(cubein)
     s=0
     layer2='second layer not complete'
     whiteOK = 'white face never complete'
@@ -98,7 +114,12 @@ def printcube(cube):
     print('   ',cube[48:51])
     print('   ',cube[51:54])
 
+<<<<<<< HEAD
+
+def getSequence(method='Beginner'):
+=======
 def sequence_def(method='Beginner'):
+>>>>>>> 15053d7eb72b0f84c5b19cafe9f6101d542c188a
     if method == 'CFOP':        # cross (C), first two layers (F2L), orient last layer (OLL), permute last layer (PLL)
         # méthode CFOP      F=         g                   o                                b                       31  r
         text="F', R, U', R', U, U, F2, Y, B', U, B, U, F2, Y, R', F', U, F, R, U, U, U, F2, Y, L, F, U', F', L', U, F2, Y"
@@ -133,7 +154,17 @@ def sequence_def(method='Beginner'):
         sequence=("L'","F","B2","R'","B","R'","L","B","D'","F'","U","B2","U","F2","D'","R2","L2","U","F2","D'")
         #reverse=("D","F'2","U'","L'2","R'2","D","F'2","U'","B'2","U'","F","D","B'","L'","R","B'","R","B'2","F'","L")
 
+<<<<<<< HEAD
+
+
+
+
+
+
+
+=======
 def printresult():
     print(cubein)
     print(cubeout)
     print(cubeout==goodcube)
+>>>>>>> 15053d7eb72b0f84c5b19cafe9f6101d542c188a
